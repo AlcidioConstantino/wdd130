@@ -1,36 +1,76 @@
-/* 1. Limita o tamanho do conteúdo principal */
+/* Base global */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #1b1b1b;
+  background-color: #f5f7f8;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+main,
+aside {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+}
+
 main {
   max-width: 840px;
 }
-main img {
-  width: 150px;
-  height: auto;
+
+main h1,
+aside h2 {
+  margin-top: 0;
 }
 
-
-  width: 20rem;
-  margin: 1rem;
-  border: 1px solid rgb(0 0 0 / 0.2);
-  padding: 1rem;
-  background-color: #eee;
-  color: #333;
-  text-align: center;
-}
-
-
+main img,
 aside img {
-  width: 200px;
+  display: block;
+  width: 100%;
   height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0 0;
 }
 
+aside {
+  max-width: 20rem;
+}
 
 p {
-  padding: 0;
+  margin: 0 0 1rem;
 }
 
-
 footer {
-  margin-top: 15px;
-  border-top: 1px solid #000;
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
   text-align: center;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    max-width: 100%;
+  }
 }
