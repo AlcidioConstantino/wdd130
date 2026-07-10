@@ -16,17 +16,21 @@ nav {
   background-color: #1c4d7a;
   padding: 1rem;
   border-radius: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 nav a {
   color: #ffffff;
   padding: 0.75rem 1rem;
-  display: block;
+  display: inline-block;
   text-decoration: none;
+  border-radius: 0.4rem;
 }
 
-nav a + a {
-  margin-top: 0.75rem;
+nav a:hover {
+  background-color: #2b6ba3;
 }
 
 main {
