@@ -1,0 +1,158 @@
+:root {
+  --primary-color: #055a05; 
+  --secondary-color: #f4a261; 
+  --accent1-color: #264653; 
+  --accent2-color: #e9c46a; 
+  --heading-font: "Times New Roman", "Georgia", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+}
+
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+header img {
+  max-width: 180px;
+  height: auto;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--accent1-color);
+  font-weight: 600;
+}
+
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+main nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+header nav,
+footer nav {
+  margin: 0;
+  padding: 0;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+/* ==========================================
+   Configuração da seção Hero (Imagem de Topo)
+   ========================================== */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* O título h1 fica em posicionamento absoluto sobre a imagem principal */
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.8;
+  background-color: var(--accent1-color);
+  color: #fff; 
+}
+
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+  max-width: 620px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.hero article img {
+  float: right;
+  width: 125px;
+  height: auto;
+  margin-left: 16px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+article {
+  margin: 0;
+}
+
+article p {
+  margin: 0;
+}
+
+/* Limpa a flutuação para que a seção de História não suba desordenada */
+section {
+  clear: both;
+}
+
+/* ==========================================
+   Configuração do Rodapé e Redes Sociais 
+   ========================================== */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 16px;
+}
+
+.socialmedia {
+  display: flex;
+  gap: 12px; 
+  margin: 0;
+  padding: 0;
+}
+
+.socialmedia img {
+  width: 32px; 
+  height: 32px;
+  display: block;
+}
+
+
+
+
+
+
