@@ -17,144 +17,192 @@ body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   background-color: var(--secondary-color);
+  line-height: 1.6;
 }
 
 header, main, footer {
-  width: 840px;
+  width: min(92vw, 960px);
   margin: 0 auto;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
   align-items: center;
-  padding: 16px 0;
+  gap: 24px;
+  padding: 20px 0 24px;
+  border-bottom: 2px solid rgba(18, 59, 93, 0.15);
+}
+
+.site-title {
+  font-family: var(--heading-font);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
 }
 
 header img {
   max-width: 180px;
   height: auto;
+  border-radius: 10px;
 }
 
-header nav ul {
+.navigation {
   display: flex;
-  gap: 20px;
+  justify-content: flex-end;
+  gap: 12px;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-header nav a {
+.navigation a {
   text-decoration: none;
   color: var(--accent1-color);
   font-weight: 600;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
+  margin-bottom: 0.75rem;
 }
 
-main nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
+main {
+  padding-bottom: 24px;
 }
 
-header nav,
-footer nav {
-  margin: 0;
-  padding: 0;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-/* ==========================================
-   Configuração da seção Hero (Imagem de Topo)
-   ========================================== */
 .hero {
   position: relative;
+  margin-bottom: 24px;
 }
 
 .hero img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* O título h1 fica em posicionamento absoluto sobre a imagem principal */
 .hero h1 {
   position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 16px;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1.5rem;
   text-align: center;
-  opacity: 0.8;
-  background-color: var(--accent1-color);
-  color: #fff; 
+  background-color: rgba(18, 59, 93, 0.85);
+  color: #fff;
+  border-radius: 8px;
+  font-size: clamp(1.7rem, 4vw, 2.7rem);
 }
 
 .hero article {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  width: calc(100% - 40px);
-  max-width: 620px;
-  background-color: rgba(255, 255, 255, 0.9);
+  bottom: 24px;
+  left: 24px;
+  width: min(90%, 620px);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: rgba(255, 255, 255, 0.92);
   padding: 16px;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .hero article img {
-  float: right;
-  width: 125px;
-  height: auto;
-  margin-left: 16px;
+  width: 140px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.hero article p {
+  margin: 0;
+}
+
+section {
+  padding: 24px 0;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 12px;
+}
+
+.adventures-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.adventures figure {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.adventures img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
   margin-bottom: 8px;
   border-radius: 8px;
 }
 
-article {
-  margin: 0;
+.adventures figcaption {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-color);
 }
 
-article p {
-  margin: 0;
-}
-
-/* Limpa a flutuação para que a seção de História não suba desordenada */
-section {
-  clear: both;
-}
-
-/* ==========================================
-   Configuração do Rodapé e Redes Sociais 
-   ========================================== */
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 16px;
-  background-color: var(--accent2-color);
+  gap: 16px;
+  padding: 20px 0 28px;
+  border-top: 2px solid rgba(18, 59, 93, 0.15);
 }
 
 .socialmedia {
   display: flex;
-  gap: 12px; 
-  margin: 0;
-  padding: 0;
+  gap: 12px;
+  align-items: center;
+}
+
+.socialmedia a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
 .socialmedia img {
-  width: 32px; 
-  height: 32px;
+  width: 24px;
+  height: 24px;
   display: block;
 }
-
-
-
-
-
 
