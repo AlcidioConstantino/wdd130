@@ -120,11 +120,13 @@ main {
 }
 
 .hero article img {
+  float: right;
   width: 140px;
   height: 120px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: none;
+  margin-left: 12px;
 }
 
 .hero article p {
@@ -137,9 +139,23 @@ section {
 
 .history-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(240px, 360px) 1fr;
   gap: 24px;
+  align-items: center;
   margin-top: 12px;
+}
+
+.history-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.history-text {
+  display: grid;
+  gap: 12px;
 }
 
 .adventures-grid {
@@ -178,6 +194,7 @@ footer {
   align-items: center;
   gap: 16px;
   padding: 20px 0 28px;
+  background-color: var(--accent2-color);
   border-top: 2px solid rgba(18, 59, 93, 0.15);
 }
 
