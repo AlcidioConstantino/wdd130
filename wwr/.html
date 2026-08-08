@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title atualizado com o nome da empresa + finalidade -->
+    <title>Contact Us | Zambezi Rafting Adventures</title>
+    <!-- Meta description personalizada -->
+    <meta name="description" content="Get in touch with Zambezi Rafting Adventures. Find our location, phone, email, and meet our staff to plan your next whitewater adventure.">
+    <meta name="author" content="Alcidio Massanganhe">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <header class="site-header">
+        <img src="images/logo.png" alt="Zambezi Rafting Adventures logo">
+        <div class="site-title">Zambezi Rafting Adventures</div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact Us</h1>
+
+        <!-- Informações da Empresa + Google Map Embedded (sem estilo inline) -->
+        <section class="company-info">
+            <h2>Company Information</h2>
+            <div class="info-grid">
+                <div class="contact-details">
+                    <p><strong>Address:</strong> Av. do Zambeze, Tete, Moçambique</p>
+                    <p><strong>Phone:</strong> +258847761041 / +258866682547</p>
+                    <p><strong>Email:</strong> alcidiomassanganhe72@gmail.com</p>
+                </div>
+
+                <!-- Google Map Iframe (ATENÇÃO: style="border:0" foi removido como exige a instrução) -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.542289417862!2d25.8322!3d-17.9244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1937130f1d39b837%3A0x280e5e01b31a3101!2sVictoria%20Falls!5e0!3m2!1sen!2s!4v1700000000000" 
+                        width="400" 
+                        height="300" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        title="Zambezi Rafting Location Map">
+                    </iframe>
+                    <p><a href="https://maps.app.goo.gl/n6CXrSu693uSvmtu7" target="_blank" rel="noreferrer noopener">Open real location in Google Maps</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perfis dos Funcionários (3 Imagens com legendas) -->
+        <section class="employee-profiles">
+            <h2>Meet Our Team</h2>
+            <div class="employees-grid">
+                <figure>
+                    <img src="images/principal.png" alt="Olidio Constantino Massanganhe, Principal">
+                    <figcaption><strong>Olidio Constantino Massanganhe</strong> - Principal</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/own.jpeg" alt="Alcidio Massanganhe, General Manager">
+                    <figcaption><strong>Alcidio Massanganhe</strong> - General Manager</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/team-member.png" alt="Yuzineide Massanganhe, Team Member">
+                    <figcaption><strong>Yuzineide Massanganhe</strong> - Team Member</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Formulário de Contato Completo -->
+        <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post" class="contact-form">
+                <div class="form-item">
+                    <label for="fullname">Name:</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Your full name">
+                </div>
+
+                <div class="form-item">
+                    <label for="useremail">Email:</label>
+                    <input type="email" id="useremail" name="useremail" required placeholder="your.email@example.com">
+                </div>
+
+                <fieldset class="form-item">
+                    <legend>Purpose of Message:</legend>
+                    <div class="radio-option">
+                        <input type="radio" id="general" name="purpose" value="general" checked>
+                        <label for="general">General Inquiry</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="reservation" name="purpose" value="reservation">
+                        <label for="reservation">Reservation Question</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="suggestion" name="purpose" value="suggestion">
+                        <label for="suggestion">Website Suggestion</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-item">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+                </div>
+
+                <div class="form-item checkbox-item">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <!-- Botão com rótulo descritivo (NÃO é apenas "Submit") -->
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Zambezi Rafting Adventures | Alcidio Massanganhe</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="Facebook Icon">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="images/linkedin.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="Instagram Icon">
+            </a>
+        </nav>
+    </footer>
+</body>
+</html>
+
+
+
+
